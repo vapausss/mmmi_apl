@@ -17,7 +17,13 @@ hands=results;
 
 function setup() {
   createCanvas(640, 480);
+  //man kann das painting kleiner als der 'fullscreen' ist machen und nur da die zeichnen möglichkeit geben
   painting = createGraphics(640, 480);
+  /*
+  mit dieser funktion sieht man nur einen weissen background statt sich selbst
+  es wird trd gemalt 
+  nützlich zu gestenerkennung?
+   */
   //painting.background(255);
   painting.clear();
   video=createCapture(VIDEO,{flipped:true});
@@ -25,26 +31,30 @@ function setup() {
   handPose.detectStart(video, gotHands); 
 }
 
+//alle punkte werden angegeben, man kann gucken ob man weitere fingerkombinationen für was anderes nutzen können
 function drawAllPoints(){
   if(hands.length>0){
     for (let hand of hands){
       if(hand.confidence > 0.1){
         for(let i=0; i<hand.keypoints.length;i++){
           let keypoint = hand.keypoints[i];
-          if(hand.handedness=="Left"){
+          if (hand.handedness == "Left") {
+            //lila
           fill(255,0,255);
           }
-          else{
+          else {
+            //gelb
           fill(255,255,0);
         }
           noStroke();
-          circle(keypoint.x,keypoint.y,16);
+          circle(keypoint.x,keypoint.y,16); 
           }
         }
       }
     }
 }
-
+//einfache ausgabe von beiden punkten, kann man als default implementieren 
+//wenn wir weitere fingerkombinationen wählen kann man hier in einer if/case anweisung die funktionen switchen 
 function showIndexThumb() {
   if (hands.length > 0) {
     let hand = hands[0];
@@ -65,6 +75,8 @@ function showIndexThumb() {
     }
   }
 }
+
+//implementation von dem malen mit beiden fingern
 function drawWithIndex(){
   if (hands.length > 0) {
     let hand = hands[0];
@@ -74,11 +86,13 @@ function drawWithIndex(){
     let y = (index.y + thumb.y) * 0.5;
 
     let d = dist(index.x, index.y, thumb.x, thumb.y);
+    //bestimmter abstand ab dem gemalt wird auf dem painting layer
     if (d < 35) {
       painting.stroke(255, 255, 0);
       painting.strokeWeight(8);
       painting.line(px, py, x, y);
     } else { 
+      //sonst sehen wir nur die beiden punkte, ohne dass die malen 
       noStroke();
       fill(255, 0, 255);
       circle(index.x, index.y, 16);
@@ -92,6 +106,7 @@ function drawWithIndex(){
 
 
 function draw() {
-  image(video,0,0);
+  image(video, 0, 0);
+  //man kann die drawWithIndex funktion in die showIndexThumb implementieren
   drawWithIndex();
 }
