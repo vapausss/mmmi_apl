@@ -17,8 +17,11 @@ und wählt open from file
 der file ist hier hochgeladen und heißt asl_model.tm   
 dann könnt ihr zu beliebigen wörtern eure beiträge leisten oder neue wörter (classes) einbinden  
 dann müsst ihr die maschine trainieren und bei den advanced einstellungen die learning rate auf 0.00101 stellen (hatte bessere ergebnisse bei mir)  
-wenn ihr das exportieren wollt dann wählt ihr tensorflow.js und download.  
-**um aber die neue .tm datei zu erhalten damit wir alle weiterhin damit arbeiten können** müsst ihr das projekt nochmal als file runterladen, ihr müsstet irgendwo ein dropdown menü sehen wo diese option ist.   
-dann habt ihr die .tm datei und könnt die hier pushen ^^  (bennent sie gerne um damit sie nicht project.tm heißt und ihr nicht durcheinanderkommt)
+- damit wir aber das modell in unserer anwendung benutzen können müsst ihr, wenn ihr auf exportieren klickt, auf link erstellen klicken, diesen binden wir in unseren code ein.  
+das aktuelle modell was ich benutze ich das hier  
+https://teachablemachine.withgoogle.com/models/qn90_QVWC/  
+- **um die neue .tm datei zu erhalten damit wir alle weiterhin damit arbeiten können und neue daten einarbeiten können** müsst ihr das projekt nochmal als file runterladen, ihr müsstet irgendwo ein dropdown menü sehen wo diese option ist.   
+dann habt ihr die .tm datei und könnt die hier pushen ^^  (bennent sie gerne um damit sie nicht project.tm heißt und ihr nicht durcheinanderkommt)   
+   
 
 p.s.: sorry für die nicht vorhandene großschreibung :)
