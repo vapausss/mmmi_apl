@@ -3,9 +3,11 @@
 https://www.startasl.com/basic-words-in-sign-language/  
 hiervon können wir die wörter nehmen, die wir alss wichtig empfinden   
 (ich hab mir das video hier (ASL 1 Vocabulary - First Signs | Start ASL) angeguckt und alle wörter daraus genommen   
-https://www.youtube.com/watch?time_continue=102&v=wltHj_ggxE4&embeds_referring_euri=https%3A%2F%2Fwww.startasl.com%2F&source_ve_path=Mjg2NjY ) 
-https://dai.cs.rutgers.edu/dai/s/signbank  
+https://www.youtube.com/watch?time_continue=102&v=wltHj_ggxE4&embeds_referring_euri=https%3A%2F%2Fwww.startasl.com%2F&source_ve_path=Mjg2NjY )   
+
+ 
 das scheint auch eine hilfsreiche website zu sein, ich hätte gedacht, dass wir die eventuell auch als unsere quelldaten einbinden   
+https://dai.cs.rutgers.edu/dai/s/signbank   
 
 # Teachable Machine
 
